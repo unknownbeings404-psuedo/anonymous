@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background with Buttons</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh; /* Full height */
+      background: url("web.jpg") no-repeat center center/cover; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column; /* Stack buttons vertically */
+      gap: 20px;             /* Space between buttons */
+    }
+
+    .btn {
+      padding: 15px 30px;   /* Adjust size */
+      font-size: 18px;
+      background: rgba(0, 123, 255, 0.9); /* Semi-transparent */
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: rgba(0, 86, 179, 0.9);
+      transform: scale(1.05);
+    }
+
+    /* Responsive: buttons resize on small screens */
+    @media (max-width: 600px) {
+      .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="button-container">
+    <button class="btn" onclick="window.open('https://www.java.com/en/', '_blank')">Java</button>
+    <button class="btn" onclick="window.open('https://www.python.org', '_blank')">Python</button>
+    <button class="btn" onclick="window.open('https://developer.mozilla.org/en-US/docs/Web/HTML', '_blank')">HTML</button>
+    <button class="btn" onclick="window.open('https://isocpp.org/', '_blank')">C++</button>
+    <button class="btn" onclick="window.open('https://developer.mozilla.org/en-US/docs/Web/CSS', '_blank')">CSS</button>
+  </div>
+
+</body>
+</html>
